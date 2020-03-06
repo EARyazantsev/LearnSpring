@@ -19,8 +19,15 @@
           class="com.sas.rusreg.spring.JazzMusic">
     </bean>
 
-
     <bean id="musicPlayer"
+          class="com.sas.rusreg.spring.MusicPlayer"
+          scope="prototype">
+        <property name="music" ref="musicClassicalBean"/>
+        <property name="name" value="My test"/>
+        <property name="volume" value="10"/>
+    </bean>
+
+    <bean id="musicPlayerList"
           class="com.sas.rusreg.spring.MusicPlayer">
         <property name="musicList">
             <list>
